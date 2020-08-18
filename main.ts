@@ -17,6 +17,12 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
     tiles.placeOnRandomTile(sprite, myTiles.tile3)
     sprite.x += -16
 })
+tiles.onMapLoaded(function (tilemap2) {
+    tiles.coverAllTiles(myTiles.tile1, myTiles.tile5)
+    tiles.coverAllTiles(myTiles.tile2, myTiles.tile5)
+    tiles.coverAllTiles(myTiles.tile4, myTiles.tile5)
+    tiles.coverAllTiles(myTiles.tile3, myTiles.tile5)
+})
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
     tiles.loadConnectedMap(ConnectionKind.Door1)
     tiles.placeOnRandomTile(sprite, myTiles.tile2)
@@ -49,7 +55,7 @@ let room_1 = tiles.createMap(tiles.createTilemap(hex`0a0007000202020202020202020
     2 . . . . . . . . . 
     2 . . . . . . . . 2 
     2 2 2 2 2 2 2 2 2 2 
-    `, [myTiles.transparency16,sprites.castle.tilePath5,sprites.builtin.forestTiles0,myTiles.tile2], TileScale.Sixteen))
+    `, [myTiles.transparency16,sprites.castle.tilePath5,sprites.builtin.forestTiles0,myTiles.tile2,myTiles.tile5], TileScale.Sixteen))
 let room_2 = tiles.createMap(tiles.createTilemap(hex`0a00070002020202020202020202020101010101010101020201010101010101010202010101010101010102030101010101010101040201010101010101010202020202020202020202`, img`
     2 2 2 2 2 2 2 2 2 2 
     2 . . . . . . . . 2 
