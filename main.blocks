@@ -1,0 +1,59 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="G6wEQDhko0N2oB_O7lZd">room 1</variable><variable id=".!eWq3V[SA6$*)%^-4,c">room 2</variable><variable id="ds]Y6TZvV!nO.])h_b^(">room 3</variable></variables><block type="pxt-on-start" id="UH571,z0p;`AVi}H/q!!" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="ET$kg3,])1dIbvJqho|="><field name="VAR" id="G6wEQDhko0N2oB_O7lZd">room 1</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="create_overworld_map" id="P0LOP4$$)fdFvt|eHNSP"><field name="tilemap">tiles.createTilemap(hex`0a00070002020202020202020202020101010101010101020201010101010101010202010101010101010102020101010101010101030201010101010101010202020202020202020202`, img`
+2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . . 
+2 . . . . . . . . 2 
+2 2 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,sprites.castle.tilePath5,sprites.builtin.forestTiles0,myTiles.tile2], TileScale.Sixteen)</field></block></value><next><block type="variables_set" id="~QlM(nK?wZ0:[7zxDO1r"><field name="VAR" id=".!eWq3V[SA6$*)%^-4,c">room 2</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="create_overworld_map" id="Cb$+j^*Yd@1HtdK72{]v"><field name="tilemap">tiles.createTilemap(hex`0a00070002020202020202020202020101010101010101020201010101010101010202010101010101010102030101010101010101040201010101010101010202020202020202020202`, img`
+2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . 2 
+. . . . . . . . . . 
+2 . . . . . . . . 2 
+2 2 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,sprites.castle.tileGrass1,sprites.castle.tileGrass2,myTiles.tile1,myTiles.tile3], TileScale.Sixteen)</field></block></value><next><block type="variables_set" id="29/Bvn1-0q44Ko2iV,M^"><field name="VAR" id="ds]Y6TZvV!nO.])h_b^(">room 3</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="create_overworld_map" id=";Ys]L_`F[W!G-ZG2fV:f"><field name="tilemap">tiles.createTilemap(hex`0a00070002020202020202020202020101010101010101020201010101010101010202010101010101010102030101010101010101020201010101010101010202020202020202020202`, img`
+2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . 2 
+2 . . . . . . . . 2 
+. . . . . . . . . 2 
+2 . . . . . . . . 2 
+2 2 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,myTiles.tile4], TileScale.Sixteen)</field></block></value><next><block type="controls_if" id="+Ap.oP*QNqYTQp{ToS-z"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="percentchance" id="~J(`Nc,+v8K/p^.p)zdI"><value name="percentage"><shadow type="math_number_minmax" id="AX%0s^3{QT*=Pu-u(T$5"><mutation min="0" max="Infinity" label="Percentage" precision="0"/><field name="SLIDER">30</field></shadow></value></block></value><statement name="DO0"><block type="tilemap_loadMap" id="~^Hq](mX]WI$r5`$!/%0"><value name="map"><shadow type="create_overworld_map"><field name="tilemap">tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16], TileScale.Sixteen)</field></shadow><block type="variables_get" id="/z~s-tnv.}prKIzQ4Da)"><field name="VAR" id="G6wEQDhko0N2oB_O7lZd">room 1</field></block></value></block></statement><statement name="ELSE"><block type="tilemap_loadMap" id="mm$msRYV=rIC$xY3!7W9"><value name="map"><shadow type="create_overworld_map"><field name="tilemap">tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, [myTiles.transparency16], TileScale.Sixteen)</field></shadow><block type="variables_get" id="jWc=Tq#hkNn.Osp(gt@m"><field name="VAR" id=".!eWq3V[SA6$*)%^-4,c">room 2</field></block></value></block></statement></block></next></block></next></block></next></block></statement></block></xml>
