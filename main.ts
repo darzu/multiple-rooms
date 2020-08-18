@@ -28,6 +28,9 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location
     tiles.placeOnRandomTile(sprite, myTiles.tile2)
     sprite.x += -16
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
+    tiles.loadConnectedMap(ConnectionKind.Ladder1)
+})
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -65,7 +68,7 @@ let room_2 = tiles.createMap(tiles.createTilemap(hex`0a0007000202020202020202020
     2 . . . . . . . . 2 
     2 2 2 2 2 2 2 2 2 2 
     `, [myTiles.transparency16,sprites.castle.tileGrass1,sprites.castle.tileGrass2,myTiles.tile1,myTiles.tile3], TileScale.Sixteen))
-let room_3 = tiles.createMap(tiles.createTilemap(hex`0a00070002020202020202020202020101010101010101020201010101010101010202010101010101010102030101010101010101020201010101010101010202020202020202020202`, img`
+let room_3 = tiles.createMap(tiles.createTilemap(hex`0a00070002020202020202020202020101010101010101020201010101050101010202010101010101010102030101010101010101020201010101010101010202020202020202020202`, img`
     2 2 2 2 2 2 2 2 2 2 
     2 . . . . . . . . 2 
     2 . . . . . . . . 2 
@@ -73,7 +76,7 @@ let room_3 = tiles.createMap(tiles.createTilemap(hex`0a0007000202020202020202020
     . . . . . . . . . 2 
     2 . . . . . . . . 2 
     2 2 2 2 2 2 2 2 2 2 
-    `, [myTiles.transparency16,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,myTiles.tile4], TileScale.Sixteen))
+    `, [myTiles.transparency16,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,myTiles.tile4,myTiles.tile5,sprites.dungeon.collectibleRedCrystal], TileScale.Sixteen))
 tiles.connectMapById(room_1, room_2, ConnectionKind.Door1)
 tiles.connectMapById(room_2, room_3, ConnectionKind.Door2)
 tiles.loadMap(room_1)
